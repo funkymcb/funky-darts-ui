@@ -33,4 +33,4 @@ jobs:
     - name: Push Docker image
       if: github.event_name != 'pull_request'
       run: |
-        docker push ${{ github.actor }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
+        docker push ${{ env.IMAGE_NAME }}:${{ env.VERSION }}
