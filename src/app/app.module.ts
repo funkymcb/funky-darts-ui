@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
@@ -11,13 +13,19 @@ function initializeKeycloak(keycloak: KeycloakService) {
         url: 'https://sso.funkyd.art/auth',
         realm: 'funkydarts',
         clientId: 'funky-darts-ui'
+      },
+      initOptions: {
+          checkLoginIframe: true,
+          checkLoginIframeInterval: 25
       }
     });
 }
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WelcomeComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
