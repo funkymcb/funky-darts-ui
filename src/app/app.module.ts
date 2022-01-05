@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { WelcomeComponent } from './components/welcome/welcome.component';
-import { ProfileComponent } from './components/profile/profile.component';
 
 function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
@@ -15,17 +13,14 @@ function initializeKeycloak(keycloak: KeycloakService) {
         clientId: 'funky-darts-ui'
       },
       initOptions: {
-          checkLoginIframe: true,
-          checkLoginIframeInterval: 25
+        checkLoginIframe: false
       }
     });
 }
 
 @NgModule({
   declarations: [
-    AppComponent,
-    WelcomeComponent,
-    ProfileComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
