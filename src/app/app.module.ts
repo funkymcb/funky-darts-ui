@@ -9,7 +9,7 @@ function initializeKeycloak(keycloak: KeycloakService) {
     keycloak.init({
       config: {
         url: 'https://sso.funkyd.art/auth',
-        realm: 'FunkyDarts',
+        realm: 'funkydarts',
         clientId: 'funky-darts-ui'
       },
       initOptions: {
