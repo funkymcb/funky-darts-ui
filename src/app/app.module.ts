@@ -14,7 +14,8 @@ function initializeKeycloak(keycloak: KeycloakService) {
       },
       initOptions: {
         checkLoginIframe: false
-      }
+      },
+      loadUserProfileAtStartUp: true
     });
 }
 
