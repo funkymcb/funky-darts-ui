@@ -3,8 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProfileComponent } from './component/profile.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'edit' },
-  { path: 'edit', component: ProfileComponent }
+  { path: '', component: ProfileComponent }
 ];
 
 @NgModule({
