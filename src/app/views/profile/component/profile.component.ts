@@ -20,4 +20,8 @@ export class ProfileComponent implements OnInit {
       this.user = this.keycloakService.getUsername();
   }
 
+  logout(): void {
+      this.keycloakService.logout('https://funkyd.art')
+  }
+
 }
