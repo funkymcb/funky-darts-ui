@@ -11,11 +11,6 @@ function initializeKeycloak(keycloak: KeycloakService) {
         url: 'https://sso.funkyd.art/auth',
         realm: 'funkydarts',
         clientId: 'funky-darts-ui'
-      },
-      initOptions: {
-        onLoad: 'check-sso',
-        silentCheckSsoRedirectUri:
-          window.location.origin + '/assets/silent-check-sso.html'
       }
     });
 }
